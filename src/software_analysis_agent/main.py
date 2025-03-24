@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os
 import sys
 import warnings
 
@@ -17,13 +18,22 @@ def run():
     """
     Run the crew.
     """
+    INPUT_FILE  = os.getenv('INPUT_FILE', 'data/inputs.md')
+    RESULT_FILE = os.getenv('RESULT_FILE', 'data/results.md')
+    use_case = ""
+    if not os.path.exists(INPUT_FILE):
+        raise FileNotFoundError(f"Input file {INPUT_FILE} does not exist.")
+    else:
+        with open(INPUT_FILE, 'r') as f:
+            use_case = f.read()
     inputs = {
-        'topic': 'AI LLMs',
-        'current_year': str(datetime.now().year)
+        'use_case': use_case,
     }
     
     try:
-        SoftwareAnalysisAgent().crew().kickoff(inputs=inputs)
+        agent = SoftwareAnalysisAgent(result_file=RESULT_FILE).crew()
+        result = agent.kickoff(inputs=inputs)
+        print(f"Final result:\n {result}")
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 

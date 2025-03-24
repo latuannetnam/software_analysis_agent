@@ -1,17 +1,40 @@
-research_task:
+business_requirement_analysis_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Analyze business objectives, constraints, and stakeholders' needs to create a business requirements document.
+    Use case:
+    {use_case}.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    A comprehensive business requirements document (BRD) that includes clearly defined business goals, detailed use cases, success criteria, stakeholder requirements, constraints, and assumptions.
+  agent: business_analyst
 
-reporting_task:
+functional_design_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Translate business requirements into detailed functional specifications, including user stories and UI/UX designs.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    A detailed functional specification document (FSD) outlining system functionality, user interactions, and workflows; 
+    high-fidelity wireframes illustrating the user interface design; 
+    and comprehensive use case diagrams capturing all possible user scenarios and system interactions.
+  agent: business_analyst
+
+software_architecture_design_task:
+  description: >
+    Define a scalable and maintainable system architecture, including components, interactions, and technology stack.
+  expected_output: >
+    A comprehensive software architecture document (SAD) that includes component diagrams detailing system components and their interactions, technology stack decisions with justifications, deployment architecture diagrams, and scalability and performance considerations.
+  agent: software_architect
+
+technical_design_task:
+  description: >
+    Provide detailed technical specifications for implementation, including database schema, class diagrams, and CI/CD pipelines.
+  expected_output: >
+    A comprehensive technical design document (TDD) that includes detailed database schema diagrams outlining tables, relationships, and constraints; class diagrams illustrating object-oriented design and interactions; detailed API specifications with request/response formats and error handling; and CI/CD pipeline configurations with step-by-step deployment processes and automation scripts.
+  agent: technical_designer
+
+project_initiation_task:
+  description: >
+    Define the project scope, budget, timeline, and risks before starting the project.
+  expected_output: >
+    A comprehensive project charter outlining objectives, stakeholders, and deliverables; 
+    a detailed project plan with milestones, timelines, and resource allocation; 
+    and a thorough risk management document identifying potential risks, mitigation strategies, and contingency plans.
+  agent: project_manager
