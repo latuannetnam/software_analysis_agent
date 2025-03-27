@@ -69,6 +69,7 @@ class SoftwareAnalysisAgent():
 			config=self.agents_config['business_analyst'],
 			llm=self.llm,
 			max_iter=self.MAX_ITER,
+			tools = [ self.tavily_search_tool ],
 			verbose=self.VERBOSE
 		)
 
@@ -78,6 +79,7 @@ class SoftwareAnalysisAgent():
 			config=self.agents_config['software_architect'],
 			llm=self.llm,
 			max_iter=self.MAX_ITER,
+			tools = [ self.tavily_search_tool ],
 			verbose=self.VERBOSE
 		)
 
@@ -87,6 +89,7 @@ class SoftwareAnalysisAgent():
 			config=self.agents_config['technical_designer'],
 			llm=self.llm,
 			max_iter=self.MAX_ITER,
+			tools = [ self.tavily_search_tool ],
 			verbose=self.VERBOSE
 		)
 
@@ -96,6 +99,7 @@ class SoftwareAnalysisAgent():
 		return Task(
 			config=self.tasks_config['business_requirement_analysis_task'],
 			output_file='result/business_requirements.md',
+			# human_input=True,
 		)
 
 	@task

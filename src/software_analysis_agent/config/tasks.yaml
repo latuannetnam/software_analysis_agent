@@ -9,7 +9,7 @@ business_requirement_analysis_task:
 
 functional_design_task:
   description: >
-    Translate business requirements into detailed functional specifications, including user stories and UI/UX designs.
+    Translate business requirements into detailed functional specifications, including user stories and UI/UX designs using Object Oriented method. 
   expected_output: >
     A detailed functional specification document (FSD) outlining system functionality, user interactions, and workflows; 
     high-fidelity wireframes illustrating the user interface design; 
@@ -20,21 +20,22 @@ software_architecture_design_task:
   description: >
     Define a scalable and maintainable system architecture, including components, interactions, and technology stack.
   expected_output: >
-    A comprehensive software architecture document (SAD) that includes component diagrams detailing system components and their interactions, technology stack decisions with justifications, deployment architecture diagrams, and scalability and performance considerations.
+    A comprehensive software architecture document (SAD) that includes component diagrams detailing system components and their interactions using AWS services and AI-driven components, technology stack decisions with justifications for AWS and Generative AI technologies, deployment architecture diagrams leveraging AWS infrastructure (e.g., EC2, S3, RDS, Lambda) and AI Agent integrations, and scalability and performance considerations tailored for AWS cloud environments and AI-powered workloads.
   agent: software_architect
 
 technical_design_task:
   description: >
-    Provide detailed technical specifications for implementation, including database schema, class diagrams, and CI/CD pipelines.
+    Provide detailed technical specifications for implementation using AWS services, AI-driven components, and CI/CD pipelines tailored for cloud-native and AI-powered deployment.
   expected_output: >
-    A comprehensive technical design document (TDD) that includes detailed database schema diagrams outlining tables, relationships, and constraints; class diagrams illustrating object-oriented design and interactions; detailed API specifications with request/response formats and error handling; and CI/CD pipeline configurations with step-by-step deployment processes and automation scripts.
-  agent: technical_designer
+    A comprehensive technical design document (TDD) utilizing AWS services and Generative AI technologies, including database schema diagrams detailing tables, relationships, and constraints using Amazon RDS or DynamoDB; microservices architecture diagrams illustrating interactions, scalability, and AI Agent integrations with AWS Lambda, Amazon ECS, and AI-driven components; detailed API specifications with request/response formats, error handling, and configurations for Amazon API Gateway and AI-powered endpoints; and CI/CD pipeline configurations leveraging AWS CodePipeline, AWS CodeBuild, and AWS CodeDeploy, including automated deployment scripts, container orchestration setups with Amazon EKS, and monitoring integrations using Amazon CloudWatch and AI-based analytics.
+    agent: technical_designer
 
 project_initiation_task:
   description: >
-    Define the project scope, budget, timeline, and risks before starting the project.
+    Define the project vision, prioritize the product backlog, establish the initial sprint plan, and identify potential risks and mitigation strategies to ensure iterative and incremental delivery.
   expected_output: >
-    A comprehensive project charter outlining objectives, stakeholders, and deliverables; 
-    a detailed project plan with milestones, timelines, and resource allocation; 
-    and a thorough risk management document identifying potential risks, mitigation strategies, and contingency plans.
+    A comprehensive project charter outlining the product vision, key stakeholders, and high-level deliverables; 
+    a prioritized product backlog with user stories and acceptance criteria; 
+    an initial sprint plan with defined goals, timelines, and team responsibilities; 
+    and a risk management plan identifying potential risks, mitigation strategies, and contingency actions to support iterative and incremental delivery.
   agent: project_manager
